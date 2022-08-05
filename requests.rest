@@ -1,0 +1,53 @@
+### Endpoint de teste
+GET http://localhost:3003/ping
+
+### Signup
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+    "nickname": "lau",
+    "email": "lau@email.com",
+    "password": "blablabla123"
+}
+
+### Login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "lau@email.com",
+    "password": "blablabla123"
+}
+
+### Get all recipes
+GET http://localhost:3003/recipes?title=
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTcwODkwMiwiZXhwIjoxNjU5Nzk1MzAyfQ.5F521cTOAkyL1j34o1YSkmZg5BIk5qlFilWLEZnA3lA
+
+### Create a recipe
+POST http://localhost:3003/recipes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzZDAwNDQ3LWRkNTItNDA1MS1hYzQ2LTQ1OGNiZTZhYjhhYyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk3MTIxNDgsImV4cCI6MTY1OTc5ODU0OH0.GYFwJnuxrFWEm76rf4jcoc_rXIxjtieiAIeTxTDR-M8
+Content-Type: application/json
+
+{
+    "title": "Macarronada",
+    "description": "Macarrão da vó"
+}
+
+### Edit a recipe
+PUT http://localhost:3003/recipes/103
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImJiOWI3ZWU4LWFlNGItNGJkMS05YmQ2LWU3ZTIxNTk0Mzk5YiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1OTYzMzI3MCwiZXhwIjoxNjU5NzE5NjcwfQ.BiEx9YwUaU0evxrsXto-JI_k5mJHLwZTMNPYO5LJMBQ
+Content-Type: application/json
+
+{
+    "title": "Kibe",
+    "description": "Kibe vegano de alho-poró"
+}
+
+### Delete a recipe
+DELETE http://localhost:3003/recipes/106
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzZDAwNDQ3LWRkNTItNDA1MS1hYzQ2LTQ1OGNiZTZhYjhhYyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk3MTIxNDgsImV4cCI6MTY1OTc5ODU0OH0.GYFwJnuxrFWEm76rf4jcoc_rXIxjtieiAIeTxTDR-M8
+
+### Delete User
+DELETE http://localhost:3003/users/f03017bb-2c08-4cdc-bb63-7fbd7cebe01f
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjkzZDAwNDQ3LWRkNTItNDA1MS1hYzQ2LTQ1OGNiZTZhYjhhYyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NTk3MTIxNDgsImV4cCI6MTY1OTc5ODU0OH0.GYFwJnuxrFWEm76rf4jcoc_rXIxjtieiAIeTxTDR-M8
